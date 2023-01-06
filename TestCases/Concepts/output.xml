@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.7.4 on win32)" generated="20220523 20:31:03.439" rpa="false" schemaversion="2">
+<suite id="s1" name="Variables List Dict" source="C:\Users\VARUN\Desktop\Varun_Personal\RobotFramework_Two_2022\TestCases\Concepts\variables_list_dict.robot">
+<test id="s1-t1" name="my first test case">
+<kw name="Set Variable" library="BuiltIn">
+<var>${var1}</var>
+<arg>Hello World</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220523 20:31:03.785" level="INFO">${var1} = Hello World</msg>
+<status status="PASS" starttime="20220523 20:31:03.785" endtime="20220523 20:31:03.785"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220523 20:31:03.786" endtime="20220523 20:31:03.787"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${var1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220523 20:31:03.787" level="INFO">Hello World</msg>
+<status status="PASS" starttime="20220523 20:31:03.787" endtime="20220523 20:31:03.787"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${global_var}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220523 20:31:03.788" level="INFO">Narasimha # can be used anywhere in the file or can be called.</msg>
+<status status="PASS" starttime="20220523 20:31:03.788" endtime="20220523 20:31:03.788"/>
+</kw>
+<status status="PASS" starttime="20220523 20:31:03.783" endtime="20220523 20:31:03.789"/>
+</test>
+<test id="s1-t2" name="my second test case">
+<kw name="my first keyword">
+<arg>mykeyword_variable</arg>
+<kw name="Log" library="BuiltIn">
+<arg>${keyword_var}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220523 20:31:03.792" level="INFO">mykeyword_variable</msg>
+<status status="PASS" starttime="20220523 20:31:03.791" endtime="20220523 20:31:03.792"/>
+</kw>
+<status status="PASS" starttime="20220523 20:31:03.791" endtime="20220523 20:31:03.792"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{List1}</var>
+<arg>Hello</arg>
+<arg>22</arg>
+<arg>True</arg>
+<arg>abcd</arg>
+<arg>Varun</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220523 20:31:03.793" level="INFO">@{List1} = [ Hello | 22 | True | abcd | Varun ]</msg>
+<status status="PASS" starttime="20220523 20:31:03.792" endtime="20220523 20:31:03.793"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${List1_length}</var>
+<arg>${list1}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220523 20:31:03.794" level="INFO">Length is 5</msg>
+<msg timestamp="20220523 20:31:03.794" level="INFO">${List1_length} = 5</msg>
+<status status="PASS" starttime="20220523 20:31:03.794" endtime="20220523 20:31:03.794"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list1_length}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220523 20:31:03.795" endtime="20220523 20:31:03.796"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list1_length}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220523 20:31:03.797" level="INFO">5</msg>
+<status status="PASS" starttime="20220523 20:31:03.797" endtime="20220523 20:31:03.797"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${list_data}</var>
+<arg>${List1}</arg>
+<arg>3</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20220523 20:31:03.798" level="INFO">${list_data} = abcd</msg>
+<status status="PASS" starttime="20220523 20:31:03.798" endtime="20220523 20:31:03.798"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220523 20:31:03.799" endtime="20220523 20:31:03.799"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list_data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220523 20:31:03.800" level="INFO">abcd</msg>
+<status status="PASS" starttime="20220523 20:31:03.800" endtime="20220523 20:31:03.800"/>
+</kw>
+<status status="PASS" starttime="20220523 20:31:03.790" endtime="20220523 20:31:03.801"/>
+</test>
+<test id="s1-t3" name="my third test case">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{dict1}</var>
+<arg>1="Varun"</arg>
+<arg>"name"="Appalla"</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220523 20:31:03.803" level="INFO">&amp;{dict1} = { 1="Varun" | "name"="Appalla" }</msg>
+<status status="PASS" starttime="20220523 20:31:03.802" endtime="20220523 20:31:03.803"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${dict1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220523 20:31:03.804" endtime="20220523 20:31:03.805"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${dict1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220523 20:31:03.805" level="INFO">{'1': '"Varun"', '"name"': '"Appalla"'}</msg>
+<status status="PASS" starttime="20220523 20:31:03.805" endtime="20220523 20:31:03.805"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${dict_data}</var>
+<arg>${dict1}</arg>
+<arg>"name"</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220523 20:31:03.806" level="INFO">${dict_data} = "Appalla"</msg>
+<status status="PASS" starttime="20220523 20:31:03.806" endtime="20220523 20:31:03.806"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${dict_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220523 20:31:03.807" endtime="20220523 20:31:03.807"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${dict_data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220523 20:31:03.808" level="INFO">"Appalla"</msg>
+<status status="PASS" starttime="20220523 20:31:03.808" endtime="20220523 20:31:03.808"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${global_var}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220523 20:31:03.809" level="INFO">Narasimha # can be used anywhere in the file or can be called.</msg>
+<status status="PASS" starttime="20220523 20:31:03.809" endtime="20220523 20:31:03.809"/>
+</kw>
+<status status="PASS" starttime="20220523 20:31:03.802" endtime="20220523 20:31:03.809"/>
+</test>
+<status status="PASS" starttime="20220523 20:31:03.442" endtime="20220523 20:31:03.811"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Variables List Dict">Variables List Dict</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

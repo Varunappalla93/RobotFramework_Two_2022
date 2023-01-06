@@ -1,0 +1,12 @@
+1)
+chromedriver.exe file must be placed in
+"C:\Users\VARUN\AppData\Local\Programs\Python\Python37-32\Scripts" folder,
+for tests to execute.
+
+
+2)
+# to save reports in Results folder
+robot -d Results TestCases/firsttest.robot
+
+
+3)lightshot app for capturing screenshots.
